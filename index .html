@@ -1,0 +1,418 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>FlowerLover | Fresh Flowers & Roses</title>
+
+  <link rel="stylesheet" href="style.css">
+
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+</head>
+
+<body>
+
+<header class="header">
+  <a class="logo" href="#home">FlowerLover<span>.</span></a>
+
+  <button class="menu-toggle" id="menuToggle" aria-label="Open menu">
+  <span></span>
+  <span></span>
+  <span></span>
+</button>
+
+  <nav class="navbar" id="navbar">
+    <a href="#home">Home</a>
+    <a href="#about">About</a>
+    <a href="#products">Products</a>
+    <a href="#reviews">Review</a>
+    <a href="#contact">Contact</a>
+  </nav>
+
+  <div class="header-actions">
+    <button class="icon-btn" id="showFavorites">
+      <i class="fas fa-heart"></i>
+      <span class="count" id="favCount">0</span>
+    </button>
+
+    <button class="icon-btn" id="showCart">
+      <i class="fas fa-shopping-cart"></i>
+      <span class="count" id="cartCount">0</span>
+    </button>
+
+    <button class="icon-btn" id="accountBtn">
+      <i class="fas fa-user"></i>
+    </button>
+  </div>
+</header>
+
+<main>
+
+  <!-- HOME SECTION -->
+  <section class="home" id="home">
+
+    <div class="home-content">
+      <p class="eyebrow">Fresh flowers, delivered with love</p>
+
+      <h1>
+        Fresh Flowers<br>
+        <span>For Every Moment</span>
+      </h1>
+
+      <p>
+        Make someone smile with beautiful roses,
+        hand-picked bouquets and thoughtful gifts.
+        We prepare every order with care and deliver
+        it right to their door.
+      </p>
+
+      <a href="#products" class="btn">
+        Shop now <i class="fas fa-arrow-right"></i>
+      </a>
+    </div>
+
+    <div class="hero-image">
+      <img src="https://images.unsplash.com/photo-1490750967868-88aa4486c946?auto=format&fit=crop&w=1100&q=85" alt="Fresh flowers">
+
+      <div class="delivery-note">
+        <i class="fas fa-truck-fast"></i>
+        <span>
+          <strong>Fresh & on time</strong>
+          <small>Flower delivery made easy</small>
+        </span>
+      </div>
+    </div>
+
+  </section>
+
+  <!-- BENEFITS -->
+  <section class="benefits">
+
+    <article>
+      <i class="fas fa-truck-fast"></i>
+      <div>
+        <h3>Free Delivery</h3>
+        <p>On qualifying orders</p>
+      </div>
+    </article>
+
+    <article>
+      <i class="fas fa-rotate-left"></i>
+      <div>
+        <h3>Freshness Promise</h3>
+        <p>Carefully selected flowers</p>
+      </div>
+    </article>
+
+    <article>
+      <i class="fas fa-gift"></i>
+      <div>
+        <h3>Special Gifts</h3>
+        <p>Make every day memorable</p>
+      </div>
+    </article>
+
+    <article>
+      <i class="fas fa-credit-card"></i>
+      <div>
+        <h3>Secure Payment</h3>
+        <p>Simple checkout process</p>
+      </div>
+    </article>
+
+  </section>
+
+  <!-- ABOUT SECTION -->
+  <section class="section about" id="about">
+
+    <div class="section-heading">
+      <span>What makes us special</span>
+      <h2>About <em>Us</em></h2>
+    </div>
+
+    <div class="about-grid">
+
+      <div class="about-photo">
+        <img src="https://images.unsplash.com/photo-1494972308805-463bc619d34e?auto=format&fit=crop&w=1000&q=85" alt="Flower arrangements">
+      </div>
+
+      <div class="about-copy">
+        <h3>We bring happiness through flowers</h3>
+
+        <p>
+          At FlowerLover, we believe that a beautiful
+          bouquet can say what words sometimes cannot.
+          From romantic red roses to cheerful mixed
+          arrangements, every bouquet is prepared
+          with attention and love.
+        </p>
+
+        <p>
+          Choose your favourite flowers, add a personal
+          message and tell us where to deliver.
+          We make gifting simple for birthdays,
+          anniversaries and celebrations.
+        </p>
+
+        <a href="#products" class="btn">Explore flowers</a>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- PRODUCTS SECTION -->
+  <section class="section products-section" id="products">
+
+    <div class="section-heading">
+      <span>Our collection</span>
+      <h2>Latest <em>Flowers</em></h2>
+      <p>Find the perfect flowers for someone special.</p>
+    </div>
+
+    <div class="shop-tools">
+
+      <label class="search-box">
+        <i class="fas fa-search"></i>
+        <input id="searchInput" type="search" placeholder="Search flowers...">
+      </label>
+
+      <select id="categoryFilter">
+        <option value="all">All flowers</option>
+        <option value="Roses">Roses</option>
+        <option value="Bouquets">Bouquets</option>
+        <option value="Lilies">Lilies</option>
+        <option value="Mixed">Mixed flowers</option>
+      </select>
+
+    </div>
+
+    <div class="product-grid" id="productGrid"></div>
+
+  </section>
+
+  <!-- DELIVERY BANNER -->
+  <section class="delivery-banner">
+    <div>
+      <span>Make their day extra special</span>
+      <h2>Send flowers. Share happiness.</h2>
+      <p>Choose a bouquet and we'll help you deliver a little joy.</p>
+      <a class="btn btn-light" href="#products">Order a bouquet</a>
+    </div>
+  </section>
+
+  <!-- REVIEWS -->
+  <section class="section reviews" id="reviews">
+
+    <div class="section-heading">
+      <span>Kind words from customers</span>
+      <h2>Customer <em>Reviews</em></h2>
+      <p>Your happiness means everything to us.</p>
+    </div>
+
+    <div class="review-grid" id="reviewGrid">
+
+      <article class="review-card">
+        <div class="stars">★★★★★</div>
+        <p>
+          "The roses were fresh and beautifully arranged.
+          Delivery was right on time and the whole
+          experience was easy."
+        </p>
+        <div class="review-person">
+          <div class="avatar">AM</div>
+          <div>
+            <strong>Amelia M.</strong>
+            <small>Happy customer</small>
+          </div>
+        </div>
+      </article>
+
+      <article class="review-card">
+        <div class="stars">★★★★★</div>
+        <p>
+          "I ordered a bouquet for my mother's birthday.
+          She loved it! I will definitely order again."
+        </p>
+        <div class="review-person">
+          <div class="avatar">DK</div>
+          <div>
+            <strong>Daniel K.</strong>
+            <small>Happy customer</small>
+          </div>
+        </div>
+      </article>
+
+      <article class="review-card">
+        <div class="stars">★★★★★</div>
+        <p>
+          "Beautiful flowers, friendly service and
+          a lovely personal touch. Highly recommended."
+        </p>
+        <div class="review-person">
+          <div class="avatar">SN</div>
+          <div>
+            <strong>Sophie N.</strong>
+            <small>Happy customer</small>
+          </div>
+        </div>
+      </article>
+
+    </div>
+
+    <!-- CUSTOMER FEEDBACK FORM -->
+    <div class="feedback-wrap">
+
+      <div>
+        <h3>Share your experience</h3>
+        <p>Have you ordered from us? We'd love to hear your feedback.</p>
+      </div>
+
+      <form id="reviewForm" class="feedback-form">
+
+        <input id="reviewName" type="text"
+          placeholder="Your name" required maxlength="40">
+
+        <select id="reviewRating">
+          <option value="5">★★★★★ - Excellent</option>
+          <option value="4">★★★★ - Very good</option>
+          <option value="3">★★★ - Good</option>
+          <option value="2">★★ - Fair</option>
+          <option value="1">★ - Poor</option>
+        </select>
+
+        <textarea id="reviewMessage"
+          placeholder="Write your review..."
+          rows="4" required maxlength="400"></textarea>
+
+        <button class="btn" type="submit">
+          Submit feedback
+        </button>
+
+      </form>
+    </div>
+
+  </section>
+
+  <!-- CONTACT -->
+  <section class="section contact" id="contact">
+
+    <div class="section-heading">
+      <span>We are happy to help</span>
+      <h2>Contact <em>Us</em></h2>
+      <p>Questions about an order or delivery? Send us a message.</p>
+    </div>
+
+    <div class="contact-grid">
+
+      <div class="contact-info">
+        <h3>Let's talk flowers</h3>
+        <p><i class="fas fa-phone"></i> +1 234 567 890</p>
+        <p><i class="fas fa-envelope"></i> hello@flowerlover.com</p>
+        <p><i class="fas fa-location-dot"></i> Local flower delivery service</p>
+        <p><i class="fas fa-clock"></i> Monday - Saturday, 8 AM - 7 PM</p>
+      </div>
+
+      <form id="contactForm" class="contact-form">
+        <input type="text" placeholder="Your name" required>
+        <input type="email" placeholder="Your email" required>
+        <input type="text" placeholder="Subject">
+        <textarea rows="5" placeholder="Your message..." required></textarea>
+        <button class="btn" type="submit">Send message</button>
+      </form>
+
+    </div>
+  </section>
+
+</main>
+
+<!-- FOOTER -->
+<footer class="footer">
+  <a class="logo" href="#home">FlowerLover<span>.</span></a>
+  <p>Beautiful flowers for life's special moments.</p>
+
+  <div class="socials">
+    <a href="#"><i class="fab fa-instagram"></i></a>
+    <a href="#"><i class="fab fa-facebook-f"></i></a>
+    <a href="#"><i class="fab fa-pinterest-p"></i></a>
+  </div>
+
+  <small>© 2026 FlowerLover. All rights reserved.</small>
+</footer>
+
+<!-- SHOPPING CART -->
+<div class="overlay" id="overlay"></div>
+
+<aside class="side-panel" id="cartPanel">
+
+  <div class="panel-heading">
+    <h2>Your cart</h2>
+    <button class="close-panel" data-close>×</button>
+  </div>
+
+  <div id="cartItems" class="cart-items">
+    <p class="empty-message">Your cart is empty.</p>
+  </div>
+
+  <div class="cart-total">
+    <strong>Total</strong>
+    <strong id="cartTotal">$0.00</strong>
+  </div>
+
+  <button class="btn checkout-btn" id="checkoutBtn">
+    Continue to checkout
+  </button>
+
+</aside>
+
+<!-- FAVOURITES -->
+<aside class="side-panel" id="favoritesPanel">
+
+  <div class="panel-heading">
+    <h2>Your favourites</h2>
+    <button class="close-panel" data-close>×</button>
+  </div>
+
+  <div id="favoriteItems" class="cart-items">
+    <p class="empty-message">No favourites yet.</p>
+  </div>
+
+</aside>
+
+<!-- CHECKOUT FORM -->
+<dialog id="checkoutDialog" class="checkout-dialog">
+
+  <form id="checkoutForm" method="dialog">
+
+    <button class="dialog-close" type="button" id="closeCheckout">×</button>
+
+    <h2>Delivery details</h2>
+    <p>Enter the details for your flower delivery.</p>
+
+    <input id="customerName" placeholder="Full name" required>
+    <input id="customerPhone" type="tel" placeholder="Phone number" required>
+    <input id="customerEmail" type="email" placeholder="Email address" required>
+
+    <textarea id="deliveryAddress" placeholder="Delivery address" rows="3" required></textarea>
+
+    <input id="deliveryDate" type="date" required>
+
+    <textarea id="giftMessage" placeholder="Gift message (optional)" rows="2"></textarea>
+
+    <button class="btn" type="submit">Place order</button>
+
+    <small class="demo-note">Demo checkout: no real payment is collected.</small>
+
+  </form>
+
+</dialog>
+
+<div class="toast" id="toast" role="status"></div>
+
+<script src="script.js"></script>
+
+</body>
+</html>
+5
